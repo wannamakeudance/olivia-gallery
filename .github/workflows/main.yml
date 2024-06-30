@@ -1,0 +1,36 @@
+name:  Build and deploy to AWS
+
+on:
+  push:
+    branches:
+      -  main
+
+jobs:
+  build_deploy_aws:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18.x
+      - name: Install dependencies
+        run: yarn install 
+      - name: Get yarn cache directory
+        id: yarn-cache
+        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
+      - name: Retrieve cached yarn-cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('./yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-southeast-2
+      - name: Deploy to AWS 
+        run: npm run deploy
