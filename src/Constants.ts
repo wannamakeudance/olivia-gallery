@@ -35,105 +35,96 @@ export const AUDIO_URL = new URL("./assets/audio/music.mp3", import.meta.url)
 /*
  * Intro
  * */
-export const BOARDS_INFO: Record<
-  string,
-  { title: string; author: string; describe: string }
-> = {
-  1: {
-    title: "《小橘贝》",
-    author: "小雅",
-    describe: `
-		它站在画面中央，静静地凝视着观众，柔和的橘色将它的柔软毛发和灵动眼眸妩媚地勾勒出来。<br>
-		小猫的小耳朵微微竖起，似乎在倾听着什么，身体略微前倾，展现出它对周围世界的好奇和敏感。<br>
-		画面的背景色以淡蓝色为主，这种色彩营造了温馨轻柔的氛围，让人仿佛置身于阳光明媚的午后时光中。<br>
-		整个画作细致精致、色彩明亮而温暖，带给人们一种温馨、亲切的感受。
+export const BOARDS_INFO: Record<string, { title: string; describe: string }> =
+  {
+    1: {
+      title: "《Wu Kong》",
+      describe: `
+	  Wukong, my sister's beloved golden retriever, is the heart and soul of my painting.
+    With his gentle demeanor and kind spirit, Wukong has a unique way of spreading warmth and joy to everyone around him. 
+    Through this artwork, I hope to share that same sense of tranquility and happiness that Wukong brings to our lives. 
+    May it bring a smile to your face and peace to your heart.
 		`,
-  },
-  2: {
-    title: "《微光》",
-    author: "小雅",
-    describe: `
-		微小的星光和银河组成了一个神秘的宇宙世界，让人感到无限的遐想和想象。<br>
-		当你凝视着这幅画时，你会感受到无边无际的深邃和宁静。<br>
-		你仿佛置身于一个没有噪音、没有烦扰的夜空中。在这个宁静的空间里，你可以看到银河中微光闪烁的样子。<br>
-		这些微光似乎是夜空中唯一的生命体，它们微弱却坚定地发出光芒，点亮着整个银河系。<br>
-		这些微光是如此的纤细而又强大，仿佛在无边的黑暗中，只有它们才能给人带来希望和力量。
+    },
+    3: {
+      title: "《Whispering Waves》",
+      describe: `
+		"Whispering Waves" is an oil painting that tries to capture the serene beauty and rhythmic motion of the sea. 
+    Through brushstrokes and a harmonious palette, express the gentle yet powerful dance of the waves, evoking a sense of peace and tranquility. 
+    I hope it can invite viewers to lose themselves in the soothing whispers of the ocean, offering a moment of calm and reflection amidst the ebb and flow of life.
 		`,
-  },
-  3: {
-    title: "《天鹅》",
-    author: "小雅",
-    describe: `
-		湖面静谧如镜，微风拂过，泛起一圈圈细微的涟漪，仿佛为优雅的白色天鹅们铺上了一层晶莹剔透的纱帐。<br>
-		其中一只白羽如雪的天鹅在水中自由自在地舞动着优美的姿态，如同一位华丽的舞者在水上翩翩起舞。<br>
-		纯白色羽毛在阳光的照射下，闪烁着淡淡的光晕，如同珍珠一般璀璨夺目。
+    },
+    2: {
+      title: "《First Impression Of Auckland》",
+      describe: `
+		When I first arrived in New Zealand, I stood at the harbor pier, captivated by the view. 
+    Gazing at the Sky Tower, its impressive structure etched into my memory. 
+    This remains my most vivid first impression of Auckland: the Sky Tower majestically rising along the coastline, silhouetted against the vast sea horizon. 
+    The scene was a perfect blend of urban elegance and natural beauty, defining my initial experience of this city.
 		`,
-  },
-  4: {
-    title: "《山中小屋》",
-    author: "小雅",
-    describe: `
-		宁静而恬淡，远山隐现于云雾中，仿佛是一幅梦幻般的画卷。<br>
-		小屋在山脚下宁静地伫立，墙体洁白，屋顶泛着淡淡的阳光，使得小屋与周围的环境相互映衬。<br>
-		流露出一种自然的和谐之美。
+    },
+    4: {
+      title: "《Fuji Mountain》",
+      describe: `
+		Mount Fuji, or Fuji-san, is Japan's tallest and most iconic mountain,located on Honshu Island, it is an active stratovolcano surrounded by lake. 
+    Its perfectly symmetrical cone is a well-known symbol of Japan, often depicted in art and photography. 
+    I drew this painting to share the beauty and majesty of Mount Fuji,
 		`,
-  },
-  5: {
-    title: "《太空人》",
-    author: "小雅",
-    describe: `
-		太空人身披着黑夜在星罗棋布的宇宙中漫游。<br>
-		虽说现在已经是太空时代，人类早就可以坐太空飞船去月球，<br>
-		但却永远无法探索别人内心的宇宙。
+    },
+    5: {
+      title: "《Sheep Flock》",
+      describe: `
+		New Zealand is a country renowned for having more sheep than people. The oil painting landscapes, adorned with grazing sheep, vividly capture the heart of the country's culture. These picturesque scenes, with green hills and flocks of sheep peacefully grazing, bring to life the serene beauty and timeless charm of New Zealand's rural countryside. 
 		`,
-  },
-  6: {
-    title: "《粉色海洋》",
-    author: "小雅",
-    describe: `
-		粉色云朵蓬松如棉花糖展开眼前，弯月微笑在缝隙间，月光柔和，清雅动人。<br>
-		紫色天空如梦，星辉闪烁，默默倾听，轻轻地，微风拂面，悄悄地，生命在流动。
+    },
+    6: {
+      title: "《Bear's portrait with bandaged ear》",
+      describe: `
+		Van Gogh's painting "Self-Portrait with Bandaged Ear" is one of his most famous self-portraits, depicting Van Gogh after he cut off his own ear. 
+    In the painting, Van Gogh is wearing a wool hat and has a thick bandage wrapped around his ear. 
+    I painted a little bear dressed in a similar manner, with a wool hat and bandaged ear, as a warm tribute to this great artist.
 		`,
-  },
-  7: {
-    title: "《风平浪静》",
-    author: "小雅",
-    describe: `
-		撑一条船，离开岸边一百米，风平浪静，彩霞慢慢淡下去。<br>
-		撑一条船，离开岸边两百米，风平浪静，夜晚轻轻呼唤你。<br>
-		撑一条船，离开岸边三百米，风平浪静，大鱼笑我傻兮兮。<br>
-		撑一条船 离开岸边四百米，风平浪静，星儿闪闪笑眯眯。<br>
-		撑一条船 离开岸边五百米，风平浪静，海龟向我挥手臂。
+    },
+    7: {
+      title: "《Golden Wheat Field》",
+      describe: `
+		Golden fields beneath the setting sun,
+    Shimmering in warm light, day's work done.
+    Golden wheat sways in the gentle breeze,
+    An undulating sea, calm and at ease.
+
+    Tranquility and harmony fill the air,
+    Nature's beauty and abundance rare.
+    In this golden glow, we find our peace,
+    A timeless moment where worries cease.
 		`,
-  },
-  8: {
-    title: "《向日葵》",
-    author: "小雅",
-    describe: `
-		阳光照耀，金黄的花盘。<br>
-		宛如一盏明灯，指引前行。<br>
-		向日葵，你是信仰，你是力量，你是光辉，你是坚毅，你是忠诚，你是爱慕，你是美丽。
+    },
+    8: {
+      title: "《Pink Sky》",
+      describe: `
+		"Pink Sky" is an oil painting which is trying to capture the ethereal beauty of a sky bathed in shades of pink during twilight. 
+    The soft, pastel hues blend seamlessly, creating a sweetness and innocence atmosphere. 
 		`,
-  },
-  9: {
-    title: "《花·虎·蝶》",
-    author: "小雅",
-    describe: `
-		一段奇妙的相遇，是自由和勇气的结合，是一份神秘而又动人的韵味。<br>
-		在这片色彩斑斓的花海之中，一只带着蝴蝶翅膀的老虎，骑着踏板车，<br>
-		它像是一道闪电，划破了这片美好的天地。<br>
-		翅膀轻轻地振动，仿佛随时可以飞离这片美好的天地，飞向更广阔的天空。
+    },
+    9: {
+      title: "《Pink Dolphin》",
+      describe: `
+		In waters clear, a gentle hue,
+    A pink dolphin swims, a dream come true.
+    With rosy skin that glistens bright,
+    It dances in the morning light.
 		`,
-  },
-  10: {
-    title: "《豚》",
-    author: "小雅",
-    describe: `
-		所有的转折隐藏在密集的鸟群中，天空与海洋都无法察觉，怀着美梦却可以看见。<br>
-		摸索颠倒的一瞬间，所有的怀念隐藏在相似的日子里，心里的蜘蛛模仿人类张灯结彩
+    },
+    10: {
+      title: "《Balance》",
+      describe: `
+		The theme of this painting is balance, capturing the delicate harmony between various elements of the scene. 
+    It shows the bright moon suspended above the sea, mirrored by its reflection in the tranquil water below. 
+    Additionally, there is a meticulous equilibrium between the shadows on the left and right, creating a symmetrical and serene composition. 
+    This interplay of light and dark, along with the reflection, embodies a sense of tranquility  balance, inviting the viewer to contemplate the natural harmony of the world.
 		`,
-  },
-};
+    },
+  };
 
 /*
  * Computer Iframe SRC

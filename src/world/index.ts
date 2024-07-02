@@ -79,22 +79,23 @@ export default class World {
     if (/.*\.(blob|glb)$/i.test(url)) {
       this.core.ui.updateLoadingProgress(
         `${
-          url.includes("collision") ? "加载碰撞场景模型" : "加载其他场景模型"
+          url.includes("collision")
+            ? "Loading collision scene model"
+            : "Loading other model scenarios"
         }：${percentage}%`
       );
     }
     if (/.*\.(jpg|png|jpeg)$/i.test(url)) {
-      this.core.ui.updateLoadingProgress("加载图片素材中...");
+      this.core.ui.updateLoadingProgress("Loading image resources...");
     }
     if (/.*\.(m4a|mp3)$/i.test(url)) {
-      this.core.ui.updateLoadingProgress("加载声音资源中...");
+      this.core.ui.updateLoadingProgress("Loading music resources...");
     }
   }
 
   private _onClickRayCast([object]: [object: Object3D]) {
     this.core.ui.showBoardsBox(
       object.userData.title,
-      object.userData.author,
       object.userData.describe,
       object.userData.src
     );

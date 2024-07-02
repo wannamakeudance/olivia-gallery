@@ -18,7 +18,6 @@ export default class UI {
     boards_container: HTMLElement;
     boards_content: HTMLElement;
     boards_title: HTMLElement;
-    boards_author: HTMLElement;
     boards_describe: HTMLElement;
     boards_img: HTMLImageElement;
 
@@ -45,7 +44,6 @@ export default class UI {
         ".boards-info .boards-container .content"
       )!,
       boards_title: document.querySelector(".boards-container .info .title")!,
-      boards_author: document.querySelector(".boards-container .info .author")!,
       boards_describe: document.querySelector(
         ".boards-container .info .describe"
       )!,
@@ -118,17 +116,11 @@ export default class UI {
     this.doms.operating_intro.classList.add("display-none");
   }
 
-  showBoardsBox(
-    title: string,
-    author: string,
-    describe: string,
-    img_src: string
-  ) {
+  showBoardsBox(title: string, describe: string, img_src: string) {
     if (this.doms.boards_dialog.style.visibility === "visible") return;
     this.doms.boards_dialog.style.visibility = "visible";
     this.doms.boards_container.classList.remove("hide");
     this.doms.boards_title.innerText = title;
-    this.doms.boards_author.innerText = author;
     this.doms.boards_describe.innerHTML = describe;
     this.doms.boards_img.src = img_src;
     this.doms.boards_content.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -138,7 +130,6 @@ export default class UI {
     this.doms.boards_dialog.style.visibility = "hidden";
     this.doms.boards_container.classList.add("hien");
     this.doms.boards_title.textContent = "";
-    this.doms.boards_author.textContent = "";
     this.doms.boards_describe.textContent = "";
     this.doms.boards_img.src = "";
   }

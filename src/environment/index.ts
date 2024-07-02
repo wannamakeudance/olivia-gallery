@@ -101,7 +101,6 @@ export default class Environment {
       board.userData = {
         name: board.name,
         title: BOARDS_INFO[key].title,
-        author: BOARDS_INFO[key].author,
         describe: BOARDS_INFO[key].describe,
         index: key,
         src: this.texture_boards[key].image.src,
@@ -149,7 +148,7 @@ export default class Environment {
             if (item.name === "computer") {
               item.userData = {
                 name: item.name,
-                title: "噢，是远方 🏕",
+                title: "Far away 🏕",
               };
               this.raycast_objects.push(item);
             }
