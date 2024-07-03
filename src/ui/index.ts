@@ -128,7 +128,7 @@ export default class UI {
 
   hideBoardsBox() {
     this.doms.boards_dialog.style.visibility = "hidden";
-    this.doms.boards_container.classList.add("hien");
+    this.doms.boards_container.classList.add("hide");
     this.doms.boards_title.textContent = "";
     this.doms.boards_describe.textContent = "";
     this.doms.boards_img.src = "";
